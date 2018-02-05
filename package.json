@@ -1,0 +1,30 @@
+{
+  "name": "vmeter",
+  "version": "1.1.0",
+  "description": "Displays vehicle hour meter aquired throught the serial port",
+  "main": "index.js",
+  "browser": "./index.js",
+  "dependencies": {
+    "gulp-browserify": "^0.5.1",
+    "gulp-jshint": "^2.1.0",
+    "jshint-stylish": "^2.2.1"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "gulp": "^3.9.1",
+    "jshint": "^2.9.5",
+    "lodash": "^3.6.0",
+    "minimatch": "^3.0.4",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0"
+  },
+  "scripts": {
+    "test": "jshint index.js && mocha"
+  },
+  "keywords": [
+    "serial",
+  ],
+  "author": "Juergen Kienheofer, AIRcable",
+  "license": "MIT",
+}

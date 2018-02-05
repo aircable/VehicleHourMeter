@@ -1,0 +1,4 @@
+node_modules
+components
+*.pem
+.DS_Store
