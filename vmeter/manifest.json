@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Machine Runtime Monitor",
+  "description": "Monitors runtime of your machines",
+
+  "version": "1.0.5",
+
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"]
+    }
+  },
+
+  "icons": {
+    "128": "extentionAssets/icon-128x128.jpeg"
+  },
+
+  "permissions": [
+    "identity",
+    "serial"
+  ]
+
+}

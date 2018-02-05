@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-ng-app="gDriveApp" data-ng-csp>
+<head>
+	<meta charset="UTF-8">
+	<title>Serial Port Monitor</title>
+
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="vmeter.css">
+
+	<script src="build/vmeter.js"></script>
+
+	<base target="_blank">
+
+</head>
+<body data-ng-controller="DocsController">
+
+	<div class="container">
+
+		<div class="page-header">
+
+			<h1>Browser Serial Port Monitor</h1>
+
+			<div id="settings" class="row">
+
+				<div class="col-sm-3">
+
+					<label for="portPath" class="control-label">Port Path:</label>
+					<select id="portPath" class="form-control"></select>
+
+				</div>
+
+				<div class="col-sm-3">
+
+					<label for="baudrate">Baud Rate:</label>
+					<select id="baudrate" class="form-control">
+						<option value="115200 selected">115200</option>
+						<option value="57600">57600</option>
+						<option value="38400">38400</option>
+						<option value="19200">19200</option>
+						<option value="9600">9600</option>
+					</select>
+
+				</div>
+
+				<div class="col-sm-3">
+					<button id="connect" class="btn btn-primary">Connect</button>
+				</div>
+
+			</div>
+
+			<div id="connected-container">
+
+				<div class="row">
+
+					<div class="col-md-9">
+
+						<div class="input-group">
+
+							<label for="input">Input:</label>
+							<input id="input" type="text" class="form-control" />
+							<span class="input-group-btn">
+								<button id="send" class="btn btn-default">Send</button>
+							</span>
+							<button class="btn" data-ng-click="fetchDocs()">Refresh</button>
+							<button class="btn" id="close-button" title="Close"></button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-9">
+
+						<label for="output">Output:</label>
+						<section id="main">
+							<ul>
+								<li data-ng-repeat="device in devices">
+									<img data-ng-src="{{device.icon}}"> {{device.src}} {{device.accu_time}}
+									<span class="date">{{device.now}}</span>
+								</li>
+							</ul>
+						</section>
+
+						<textarea id="output" class="form-control" rows="20"></textarea>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
